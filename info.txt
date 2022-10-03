@@ -1,0 +1,40 @@
+componentes funcionales
+-importar react (el import react ya no es necesario declararlo)
+-debe tener una funcion 
+-el nombre de la función debe comenzar con mayusculas siempre
+-la funcion debe retomar algo (siempre debe ser un solo elemento)
+-se debe exportar la función
+-jsx solo para conponentes
+
+cada componente con su css
+
+
+
+Componentes de clase
+-props
+-states 
+-ciclo de vida
+-metodos del ciclo de vida
+
+const miFuncion =(parametro)=>{
+
+
+
+}
+
+ function miFuncion(parametro){}
+
+ siempre recibo un objeto con todo lo que envíe y lo recibo con el nombre props (es una convención)
+
+ por props puedo mandar funciones y componentes
+
+ para pasar componentes por prop tengo que 
+
+   <Navbar nombreUsuario={login}>
+      <ComponenteBoton/>
+      <ComponenteTitulo/>
+    </Navbar> cerrar el navbar y adentro paro los componentes sino sería así:
+    //<Navbar nombreUsuario={login}/>
+estos props se llaman children
+
+las props son solo de lectura
