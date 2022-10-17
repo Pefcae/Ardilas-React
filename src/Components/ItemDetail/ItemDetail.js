@@ -8,6 +8,8 @@ export const ItemDetail = ({productos}) => {
     }
     
     return (
+        
+
     <div className='detailContainer'>
         <h1 className='titulo'>{productos.title}</h1>
         <img src={productos.image} alt={productos.title} className='imagen'/>
@@ -16,11 +18,16 @@ export const ItemDetail = ({productos}) => {
             <p>${productos.price}</p>
             <div></div>
         </div>
-        <ItemCount stock={productos.rating.count} onAdd={onAdd} inicial={1} className='contador'/>
-   //acá se presenta el error
+        <ItemCount stock={productos.id} onAdd={onAdd} inicial={1} className='contador'/>
         
 
     </div>
         
     )
 }
+
+/*
+acá quise poner el count de rating. no se porque me da error así que dejé el ID
+
+*/
+
