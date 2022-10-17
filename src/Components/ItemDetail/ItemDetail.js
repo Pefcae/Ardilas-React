@@ -16,8 +16,8 @@ export const ItemDetail = ({productos}) => {
             <p>${productos.price}</p>
             <div></div>
         </div>
-        <ItemCount stock={productos.id} onAdd={onAdd} inicial={1} className='contador'/>
-
+        <ItemCount stock={productos.rating.count} onAdd={onAdd} inicial={1} className='contador'/>
+   //acá se presenta el error
         
 
     </div>
