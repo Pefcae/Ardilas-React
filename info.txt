@@ -38,3 +38,107 @@ const miFuncion =(parametro)=>{
 estos props se llaman children
 
 las props son solo de lectura
+
+los hooks 
+siempre van a comenzar con use
+siempre se declaran dentro del componente
+no se pueden declarar de forma condicional
+son funciones
+los estados no se modifican directamente, se usa el st
+
+
+ciclo de vida de componentes y metodos
+
+3 pasos importantes
+-montaje (mount)
+  -metodo constructor
+  -render
+  -componentDidMount ocurre siempre dps del render
+     normalmente se suelen ejecutar consultas y hacer operaciones que el componente necesita
+-actualización(update)
+  -constructor
+  -render
+  -componentDidUpdate
+
+-desmontaje (unmount)
+  -componenteWillUnmount
+
+
+useEffect
+con esta configuración el useEffect se ejecuta solo en el montaje
+   useEffect(()=>{
+    //bloque de código
+    },[]);
+
+con esta configuración el useEffect se ejecuta  en el montaje y cuando detecta cambios en los valores del array de dependencia
+
+    useEffect(()=>{
+    //bloque de código
+    },[valores]);
+
+con esta configuración el useEffect se ejecuta  en el montaje y actualización, así no se utiliza
+
+    useEffect(()=>{
+    //bloque de código
+    });
+
+
+    setTimeout (()=>{console.log("luego de 2 seg)},2000 )
+    setInterval(()=>{console.log("ping")},2000)
+
+
+    API
+    XHR - Fetch(then async/await axios)
+
+    a- b
+    request - response
+    cliente - server
+
+    request - cliente
+    -URL
+    -metodo GET POST - DELETE PUT  PATCH OPTION 
+    -headers es metadata, es información - configuración de la data
+    -body la data cruda
+    -version
+
+GET es para traer información
+post para subir información
+put pisar toda una información
+patch para algo específico -- fue desapareciendo
+
+response - server
+version
+headers
+body
+codigo de respuesta
+
+
+ajax asynchronous js and xml
+
+fetch es una promesa que devuelve 2 parametros 
+fetch (url,{}) --el 2do es opcional
+
+
+fetch(url)
+method:"POST",
+headers:{
+  'content-type': 'application/json'},
+body: JSON.stringfy({nombre:"ale"}})
+})
+
+
+fetch(url) --por defecto hace GET
+
+routing y navegacion
+
+history.pushState
+react router
+https://reactrouter.com/en/main
+
+React-router-dom v6 : https://reactrouter.com/en/v6.3.0/getting-started/overview
+
+platzi.arreglate.com
+
+npm install react-router-dom
+https://reactrouter.com/en/main/hooks/use-params
+
