@@ -3,6 +3,7 @@
     grid-template-areas: 
     "titulo titulo"
     "imagen descripcion"
+    "imagen Stock"
     "imagen precio"
     "imagen contador"
     ;
@@ -12,6 +13,11 @@
 
 .titulo{
     grid-area: titulo;
+    text-align: center;
+
+}
+.stock{
+    grid-area: Stock;
     text-align: center;
 
 }

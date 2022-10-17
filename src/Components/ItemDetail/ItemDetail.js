@@ -5,20 +5,22 @@ import "./ItemDetail.css"
 export const ItemDetail = ({productos}) => {
     const onAdd = (numero)=>{
         console.log("compraste");
+
     }
     
     return (
-        
 
     <div className='detailContainer'>
         <h1 className='titulo'>{productos.title}</h1>
         <img src={productos.image} alt={productos.title} className='imagen'/>
         <p className='descripcion'>{productos.description}</p>
+        <p className='Stock'>El stock disponible es: {productos.rating.count}</p>
+
         <div className='precio'>
             <p>${productos.price}</p>
             <div></div>
         </div>
-        <ItemCount stock={productos.id} onAdd={onAdd} inicial={1} className='contador'/>
+        <ItemCount stock={productos.rating} onAdd={onAdd} inicial={1} className='contador'/>
         
 
     </div>
