@@ -5,7 +5,7 @@ export const ItemCount = ({stock, onAdd, inicial}) => {
     const [contar, setContar] = useState(inicial);
 
     const agregarContador = ()=>{
-        if(contar<stock.count){
+        if(contar<stock){
             setContar(contar+1);
         }
 
