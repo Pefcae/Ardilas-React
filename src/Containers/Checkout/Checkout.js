@@ -6,6 +6,7 @@ import {db} from "../../firebase/firebase";
 import { collection, addDoc,doc,updateDoc} from "firebase/firestore"
 import { Formik, Field, Form } from "formik";
 import Swal from 'sweetalert2'
+import './checkout.css'
 
 
 

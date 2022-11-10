@@ -29,9 +29,7 @@
     grid-area: descripcion;
 }
 
-.stock{
-    grid-area: stock;
-}
+
 
 .precio{
     grid-area: precio;
