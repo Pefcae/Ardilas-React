@@ -9,10 +9,10 @@ const Navbar = () =>{
 
 
 const categorias = [
-    {nombre: "electronics", id:0, ruta:"/categoria/electronics"},
-    {nombre: "jewelery", id:1, ruta:"/categoria/jewelery"},
-    {nombre: "men's clothing", id:2, ruta:"/categoria/men's clothing"},
-    {nombre: "women's clothing", id:3, ruta:"/categoria/women's clothing"},
+    {nombre: "River Plate", id:0, ruta:"/categoria/River Plate"},
+    {nombre: "Boca Juniors", id:1, ruta:"/categoria/Boca Juniors"},
+    {nombre: "Selección Argentina", id:2, ruta:"/categoria/Selección Argentina"},
+    {nombre: "Avellaneda", id:3, ruta:"/categoria/Avellaneda"},
 ]
 
     return (
@@ -20,7 +20,7 @@ const categorias = [
             <Link to="/">
             <img src={logo} alt="Logo de la tienda"/>
             </Link>
-            <h1 className="Titulo">Adidas</h1>
+            <h1 className="Titulo">Tienda Online</h1>
             <nav>
                 <ul>{
                     categorias.map((categoria)=>{
@@ -29,7 +29,7 @@ const categorias = [
                 </ul>
             </nav>
             <Link to="/cart">
-            < CartWidget />    
+            <button className='btn-nav'><CartWidget/></button>
             </Link>
         </header>
     );

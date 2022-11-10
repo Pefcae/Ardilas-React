@@ -142,3 +142,6 @@ platzi.arreglate.com
 npm install react-router-dom
 https://reactrouter.com/en/main/hooks/use-params
 
+
+
+

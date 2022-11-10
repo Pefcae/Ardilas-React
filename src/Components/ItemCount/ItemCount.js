@@ -18,26 +18,27 @@ export const ItemCount = ({stock, onAdd, inicial}) => {
     const agregarAlCarrito = ()=>{
         if(stock!==0){
             onAdd(contar);
+            
         }
     }
     return (
         <div className='contadorProductos'>
             <div className='contador'>
                 <button onClick={restarContador}>
-                    <span class="button_top">-
+                    <span className="button_top">-
                     </span>
                  </button>
                 <p>{contar}</p>
                 <button onClick={agregarContador}>
-                    <span class="button_top">+
+                    <span className="button_top">+
                    </span>
                 </button>
             </div>
-            <div className='contador'>
+            <div className='contador2'>
                 <button disabled={stock===0} onClick={agregarAlCarrito}>{
                      stock === 0 ? 
-                         <span class="button_top">no tenemos productos</span>  : 
-                         <span class="button_top">Agregar al Carrito</span> 
+                         <span className="button_top">no tenemos productos</span>  : 
+                         <span className="button_top">Agregar al Carrito</span> 
                          }
                 </button>
             </div>

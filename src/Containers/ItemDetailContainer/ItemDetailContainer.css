@@ -1,6 +1,7 @@
 .container{
     width: auto;
     display: flex;  
+    text-decoration: none;
 
     margin: 1rem;
 }
