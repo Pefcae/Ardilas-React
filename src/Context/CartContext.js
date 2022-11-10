@@ -20,11 +20,7 @@ export const CustomtProvider = ({children}) => {
  
     
     if (IsInCart(item.id)) {
-      /*const found = cart.find(producto => producto.id === item.id);
-      const index = cart.indexOf(found);
-      const aux = [...cart];
-      aux[index].cantidad += cantidad
-      setCart(aux);*/
+
       const modificado = cart.map((producto) => {
         if (producto.id === item.id) {
           producto.cantidad += cantidad;
@@ -68,4 +64,3 @@ export const CustomtProvider = ({children}) => {
 }
 
 
-//removeItem

@@ -11,7 +11,6 @@ export const ItemDetail = ({productos}) => {
    const [agregarCarrito, setAgregarCarrito] = useState(true);
    
    const {addItem} =useContext (CartContext);
-//   const resultado =useContext (Context);
 
 
 
@@ -65,4 +64,3 @@ export const ItemDetail = ({productos}) => {
 }
 
 
-//reemplazar id por stock

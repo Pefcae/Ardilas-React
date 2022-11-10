@@ -18,7 +18,8 @@ Página Web de venta de cuandros futboleros realiza en el curso REACT de CoderHo
  * Se consumieron APIs que luego fueron reemplazadas por los servicios de Firebase
  * Routing y navegación
  * Técnicas de renderizado
-
+ * Integración con Sweet Alert
+ 
 
 ***
 ### USAGE:
@@ -39,4 +40,9 @@ Página Web de venta de cuandros futboleros realiza en el curso REACT de CoderHo
 
 ***
 
-[CODE](https://github.com/Pefcae/Ardilas-React.git) - [DEMO]()
+[CODE](https://github.com/Pefcae/Ardilas-React.git) - 
+
+##Redes
+> * Linkedin: https://www.linkedin.com/in/pablo-ezequiel-federiconi/
+> * Mail: Pfedericoni@gmail.com
+> * Repo: https://github.com/Pefcae/Ardilas-React.git

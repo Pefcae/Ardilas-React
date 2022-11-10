@@ -10,7 +10,6 @@ import Swal from 'sweetalert2'
 
 
 const TerminaCompra = () => {
-  //const [comprado, setComprado]=useState(0);
 
   const {total, cart, clear} = useContext(CartContext);
   const [disable, setDisable] = React.useState(true);
@@ -31,7 +30,6 @@ const TerminaCompra = () => {
 }) 
 const [formData,setFormData] = useState({
     name: '',
-   // phone: '',
     email:''
 })
 
@@ -41,7 +39,6 @@ const [formData,setFormData] = useState({
       actualizarStock()
         clear()
 
-      //setComprado(1)
 
   }
 
@@ -62,7 +59,6 @@ const [formData,setFormData] = useState({
 
   const canceloCompra = () =>{
     clear()
-    //setComprado(2)
   }
 
   const confirmarCompra = () =>{

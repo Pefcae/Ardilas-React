@@ -13,8 +13,6 @@ const ItemListContainer = (mensaje) =>{
     const [loading, setLoading] = useState(true);
 
     const {id}=useParams();
-    //const URL_BASE = 'https://fakestoreapi.com/products';
-    //const URL_CATEGORIA = `${URL_BASE}/category/${id}`
 
 
     useEffect(()=>{
@@ -23,8 +21,7 @@ const ItemListContainer = (mensaje) =>{
 
 
 
-    // const productCollection = collection(db, "productos");
-    //const queryFilter= query(productCollection, where("category" , "==", id))
+ 
     
 
   
