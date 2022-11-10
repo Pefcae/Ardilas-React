@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 import {db} from "../../firebase/firebase";
@@ -15,7 +14,6 @@ const TerminaCompra = () => {
   const {total, cart, clear} = useContext(CartContext);
   const [disable, setDisable] = React.useState(true);
 
-  const [ orderOk, setOrderOk ] = useState(false)
   const [order, setOrder] = useState({
     items: cart.map((producto) => {
         return {
@@ -35,7 +33,7 @@ const [formData,setFormData] = useState({
 })
 
   const submitData = (e) =>{
-
+    
       pushData({...order, comprador: formData})
       actualizarStock()
         clear()
@@ -45,7 +43,7 @@ const [formData,setFormData] = useState({
 
   const changeForm = (e) => {
 
-    setFormData({...formData, [e.target.name]: e.target.value})
+    setFormData( {...formData, [e.target.name]: e.target.value})
   }
 
  
@@ -53,26 +51,37 @@ const [formData,setFormData] = useState({
   const pushData = async (newOrder) => {
     const collectionOrder = collection(db, 'ordenes')
     const orderDoc = await addDoc(collectionOrder, newOrder)
-    setOrderOk(orderDoc.id)
 
-  //  Swal.fire(
-      //{  title: "¡Muchas gracias por confiar en nosotros! Por favor comuníquese al 11-1234-1234 para acordar el pago y envío de la mercadería. Su número de pedido es: " + orderDoc.id}
-      //timer : 1500
+
+      
 
       Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: '¡Muchas gracias por confiar en nosotros! Por favor comuníquese al 11-1234-1234 para acordar el pago y envío de la mercadería. Su número de pedido es: ' + orderDoc.id,
-        showConfirmButton: false,
+        title: '¡Muchas gracias por confiar en nosotros! ',
+        text: 'Por favor comuníquese al 11-1234-1234 para acordar el pago y envío de la mercadería. Su número de pedido es: ' + orderDoc.id,
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCMYsFXSaA81O6EB6r18ugpY93jr4Pj-N5LA&usqp=CAU',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
         timer: 4500,
         timerProgressBar: true
-        
       })
+
+        
+
       
-      //)
   }
 
   const canceloCompra = () =>{
+    Swal.fire({
+      title: '¡Compra cancelada! ',
+      text: 'Esperamos que vuelva pronto',
+      imageUrl: 'https://ayudawp.com/wp-content/uploads/2017/09/abandono-de-carrito-woocommerce-e1505139963303.png',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+      timer: 4500,
+      timerProgressBar: true
+    })
     clear()
   }
 
@@ -104,7 +113,8 @@ const [formData,setFormData] = useState({
 
           setFormData({...formData, values})
           setDisable(false)
-
+       //   confirmarCompra()
+         
         }}
       >
         <Form>
@@ -113,23 +123,25 @@ const [formData,setFormData] = useState({
           <Field onChange={changeForm} name="name" type="text" required    placeholder="nombre y apellido"  value={formData.name} />
           
           <label htmlFor="email">Email</label>
-          <Field onChange={changeForm} name="email" type="email" required pattern=".+@.+.com"  placeholder="email YYY@ZZZ.COM " value={formData.email}/> 
-
-          <button type="submit">Validar datos</button>
-
-
-       
+          <Field onChange={changeForm} name="email" type="email" required pattern=".+@.+.com"  placeholder="email yyy@zzz.com" value={formData.email}/> 
+          <div className= "validationContainer"> 
+            <button type="submit">Validar datos</button>
+          </div>
         </Form>
       </Formik>
       
+      <div className= "SalesContainer">
+
       <Link to={`/`}>
-          <button disabled={disable}   onClick={()=> confirmarCompra()} >Confirmar Compra</button>
+          <button className= "btnCancel" onClick={()=> canceloCompra()} >Cancelar Compra</button>
         </Link>
 
-        <Link to={`/`}>
-          <button  onClick={()=> canceloCompra()} >Cancelar Compra</button>
+      <Link to={`/`}>
+          <button className= "btnOk" disabled={disable}   onClick={()=> confirmarCompra()} >Confirmar Compra</button>
         </Link>
        
+        </div>
+
     </div>
        
 
