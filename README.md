@@ -26,10 +26,10 @@ Página Web de venta de cuandros futboleros realiza en el curso REACT de CoderHo
 > * Al ingresar en  **Ardilas** verás todos los productos que ofrecemos
 
 > * Podrás seleccionar categorías 
-> * River Plate
-> * Selección argentina
-> * Boca Juniors
-> * Avellaneda, que contiene a Racing e Independiente
+> 1 River Plate
+> 2 Selección argentina
+> 3 Boca Juniors
+> 4 Avellaneda, que contiene a Racing e Independiente
 
 
 > * Al seleccionar en carrito que tiene cada item podrás ver mayor detalle y ahí elegir la cantidad que necesites.
@@ -42,7 +42,7 @@ Página Web de venta de cuandros futboleros realiza en el curso REACT de CoderHo
 
 [CODE](https://github.com/Pefcae/Ardilas-React.git) - 
 
-##Redes
+## Redes
 > * Linkedin: https://www.linkedin.com/in/pablo-ezequiel-federiconi/
 > * Mail: Pfedericoni@gmail.com
 > * Repo: https://github.com/Pefcae/Ardilas-React.git
