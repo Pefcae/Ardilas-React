@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const Cart = () => {
   const {cart,deleteItem,total,clear} =useContext (CartContext);
-  console.log(cart)
   return (
     <>
     {cart.length===0 ? (

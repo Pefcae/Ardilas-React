@@ -27,7 +27,6 @@ const ItemListContainer = (mensaje) =>{
     //const queryFilter= query(productCollection, where("category" , "==", id))
     
 
-  console.log(id)
   
     useEffect(() => {
 

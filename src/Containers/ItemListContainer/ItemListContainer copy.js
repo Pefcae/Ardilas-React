@@ -29,7 +29,6 @@ const ItemListContainer = (mensaje) =>{
           try {
             const res = await fetch(id === undefined ? URL_BASE : URL_CATEGORIA);
             const data = await res.json();
-            console.log(data)
             setProductos(data);
           } catch {
             console.log("error");
