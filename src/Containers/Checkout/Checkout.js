@@ -54,7 +54,21 @@ const [formData,setFormData] = useState({
     const orderDoc = await addDoc(collectionOrder, newOrder)
     setOrderOk(orderDoc.id)
 
-    Swal.fire({  title: "¡Muchas gracias por confiar en nosotros! Por favor comuníquese al 11-1234-1234 para acordar el pago y envío de la mercadería. Su número de pedido es: " + orderDoc.id})
+  //  Swal.fire(
+      //{  title: "¡Muchas gracias por confiar en nosotros! Por favor comuníquese al 11-1234-1234 para acordar el pago y envío de la mercadería. Su número de pedido es: " + orderDoc.id}
+      //timer : 1500
+
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: '¡Muchas gracias por confiar en nosotros! Por favor comuníquese al 11-1234-1234 para acordar el pago y envío de la mercadería. Su número de pedido es: ' + orderDoc.id,
+        showConfirmButton: false,
+        timer: 4500,
+        timerProgressBar: true
+        
+      })
+      
+      //)
   }
 
   const canceloCompra = () =>{
